@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubTopicViewController: UINavigationController {
+class SubTopicViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -233,19 +233,38 @@
         <!--Topics-->
         <scene sceneID="YUt-l0-lo0">
             <objects>
-                <tableViewController id="gJL-KY-hQZ" sceneMemberID="viewController">
+                <tableViewController id="gJL-KY-hQZ" customClass="TopicsViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ano-zB-MQx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hde-PI-TRI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TopicCell" textLabel="EIN-3A-kWf" detailTextLabel="X1M-kc-JgN" style="IBUITableViewCellStyleSubtitle" id="hde-PI-TRI">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hde-PI-TRI" id="Zn4-Xb-M6f">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EIN-3A-kWf">
+                                            <rect key="frame" x="16.000000000000004" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X1M-kc-JgN">
+                                            <rect key="frame" x="15.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xwb-8l-HSM" kind="presentation" id="K7V-qT-ZKs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -259,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="3462" y="132"/>
         </scene>
-        <!--Topics View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="U2L-fC-ZeZ">
             <objects>
-                <navigationController id="zsR-rQ-B0z" customClass="TopicsViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="zsR-rQ-B0z" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bLX-5Q-hQ4">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -319,7 +338,7 @@
         <!--Root View Controller-->
         <scene sceneID="hbE-Cp-Tce">
             <objects>
-                <tableViewController id="Xwb-8l-HSM" sceneMemberID="viewController">
+                <tableViewController id="Xwb-8l-HSM" customClass="SubTopicViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="onW-qE-fl4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="5268" y="132"/>
         </scene>
-        <!--Sub Topic View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="XbZ-pe-YM3">
             <objects>
-                <navigationController id="mfR-oy-eeK" customClass="SubTopicViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="mfR-oy-eeK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NLt-pk-6rd">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -359,10 +378,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8n-Zt-4lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4399" y="132"/>
+            <point key="canvasLocation" x="4438" y="603"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I2F-Gd-ZVp"/>
+        <segue reference="QyQ-3J-GAG"/>
+        <segue reference="luB-2e-UpZ"/>
     </inferredMetricsTieBreakers>
 </document>
