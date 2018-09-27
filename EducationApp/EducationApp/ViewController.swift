@@ -15,11 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func logInChoice(_ sender:UIButton){
+    @IBAction func buttonChange(_ sender: UIButton) {
         
-        sender.setTitle("Hello", for: .normal)
+        if sender.title(for: .normal) == "X" {
+            
+            sender.setTitle("A very long title for this button.", for: .normal)
+            
+        }else{
+            
+            sender.setTitle("X", for: .normal)
+            
+        }
         
     }
 
 }
-

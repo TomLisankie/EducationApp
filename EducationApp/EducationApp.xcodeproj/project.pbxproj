@@ -17,6 +17,13 @@
 		E98D1E782158371300FA0E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98D1E762158371300FA0E1F /* LaunchScreen.storyboard */; };
 		E98D1E832158371300FA0E1F /* EducationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D1E822158371300FA0E1F /* EducationAppTests.swift */; };
 		E98D1E8E2158371300FA0E1F /* EducationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D1E8D2158371300FA0E1F /* EducationAppUITests.swift */; };
+		E9FA3636215C00C400883B53 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3635215C00C400883B53 /* TopicsViewController.swift */; };
+		E9FA3638215C565400883B53 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3637215C565400883B53 /* LaunchViewController.swift */; };
+		E9FA363A215C574500883B53 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3639215C574500883B53 /* RegisterViewController.swift */; };
+		E9FA363C215C57AD00883B53 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA363B215C57AD00883B53 /* LogInViewController.swift */; };
+		E9FA363E215C5B6D00883B53 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA363D215C5B6D00883B53 /* EvaluationViewController.swift */; };
+		E9FA3640215C5C1700883B53 /* WebContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA363F215C5C1700883B53 /* WebContentViewController.swift */; };
+		E9FA3642215C5DA000883B53 /* SubTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3641215C5DA000883B53 /* SubTopicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,13 @@
 		E98D1E892158371300FA0E1F /* EducationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EducationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D1E8D2158371300FA0E1F /* EducationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationAppUITests.swift; sourceTree = "<group>"; };
 		E98D1E8F2158371300FA0E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FA3635215C00C400883B53 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		E9FA3637215C565400883B53 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		E9FA3639215C574500883B53 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E9FA363B215C57AD00883B53 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		E9FA363D215C5B6D00883B53 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
+		E9FA363F215C5C1700883B53 /* WebContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentViewController.swift; sourceTree = "<group>"; };
+		E9FA3641215C5DA000883B53 /* SubTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTopicViewController.swift; sourceTree = "<group>"; };
 		FE061F87257A9D3AC6B71B87 /* Pods-EducationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EducationApp/Pods-EducationApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,10 +153,17 @@
 			children = (
 				E98D1E6D2158371200FA0E1F /* AppDelegate.swift */,
 				E98D1E6F2158371200FA0E1F /* ViewController.swift */,
+				E9FA363F215C5C1700883B53 /* WebContentViewController.swift */,
+				E9FA3637215C565400883B53 /* LaunchViewController.swift */,
+				E9FA3639215C574500883B53 /* RegisterViewController.swift */,
+				E9FA363B215C57AD00883B53 /* LogInViewController.swift */,
 				E98D1E712158371200FA0E1F /* Main.storyboard */,
+				E9FA3641215C5DA000883B53 /* SubTopicViewController.swift */,
 				E98D1E742158371300FA0E1F /* Assets.xcassets */,
 				E98D1E762158371300FA0E1F /* LaunchScreen.storyboard */,
 				E98D1E792158371300FA0E1F /* Info.plist */,
+				E9FA3635215C00C400883B53 /* TopicsViewController.swift */,
+				E9FA363D215C5B6D00883B53 /* EvaluationViewController.swift */,
 			);
 			path = EducationApp;
 			sourceTree = "<group>";
@@ -404,8 +425,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FA363E215C5B6D00883B53 /* EvaluationViewController.swift in Sources */,
+				E9FA3642215C5DA000883B53 /* SubTopicViewController.swift in Sources */,
+				E9FA3640215C5C1700883B53 /* WebContentViewController.swift in Sources */,
 				E98D1E702158371200FA0E1F /* ViewController.swift in Sources */,
+				E9FA363A215C574500883B53 /* RegisterViewController.swift in Sources */,
+				E9FA363C215C57AD00883B53 /* LogInViewController.swift in Sources */,
 				E98D1E6E2158371200FA0E1F /* AppDelegate.swift in Sources */,
+				E9FA3636215C00C400883B53 /* TopicsViewController.swift in Sources */,
+				E9FA3638215C565400883B53 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

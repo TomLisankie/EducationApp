@@ -10,9 +10,52 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="mpm-ke-AfY">
+            <objects>
+                <viewController id="bkv-BS-RgG" customClass="ViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="beq-e0-FHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B76-s2-TWu">
+                                <rect key="frame" x="147.66666666666666" y="670" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.22773682568014542" green="1" blue="0.20164530924905533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="fB5-os-roc"/>
+                                </constraints>
+                                <state key="normal" title="Green"/>
+                                <connections>
+                                    <action selector="buttonChange:" destination="bkv-BS-RgG" eventType="touchUpInside" id="HzO-3o-5eR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98H-88-Odg">
+                                <rect key="frame" x="147.66666666666666" y="740" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.97396980263917765" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Yellow"/>
+                                <connections>
+                                    <action selector="buttonChange:" destination="bkv-BS-RgG" eventType="touchUpInside" id="NOa-aw-JYC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="98H-88-Odg" firstAttribute="width" secondItem="B76-s2-TWu" secondAttribute="width" id="060-cF-u6p"/>
+                            <constraint firstItem="98H-88-Odg" firstAttribute="leading" secondItem="B76-s2-TWu" secondAttribute="leading" id="JJK-2T-BS7"/>
+                            <constraint firstItem="Qlc-bU-Xcw" firstAttribute="bottom" secondItem="98H-88-Odg" secondAttribute="bottom" constant="8" id="WqO-fH-dtL"/>
+                            <constraint firstItem="98H-88-Odg" firstAttribute="top" secondItem="B76-s2-TWu" secondAttribute="bottom" constant="40" id="eRY-RN-dqf"/>
+                            <constraint firstItem="98H-88-Odg" firstAttribute="centerX" secondItem="beq-e0-FHD" secondAttribute="centerX" id="rLJ-Bi-iQA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qlc-bU-Xcw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JsL-Ff-tL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-793" y="100"/>
+        </scene>
+        <!--Launch View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,17 +114,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Yo-qhv">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Yo-qhv">
                                 <rect key="frame" x="103" y="308" width="222" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4b-B4-HmY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4b-B4-HmY">
                                 <rect key="frame" x="166" y="391" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <segue destination="zsR-rQ-B0z" kind="show" id="luB-2e-UpZ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPz-fP-Yxd">
                                 <rect key="frame" x="103" y="241" width="222" height="30"/>
@@ -92,6 +136,12 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S4b-B4-HmY" firstAttribute="centerX" secondItem="Whf-fF-eck" secondAttribute="centerX" id="Dy2-om-lov"/>
+                            <constraint firstItem="S4b-B4-HmY" firstAttribute="leading" secondItem="YY1-zo-Olo" secondAttribute="leading" constant="166" id="aa2-ja-ORG"/>
+                            <constraint firstItem="S4b-B4-HmY" firstAttribute="centerY" secondItem="Whf-fF-eck" secondAttribute="centerY" id="fX0-vt-PyE"/>
+                            <constraint firstItem="S4b-B4-HmY" firstAttribute="top" secondItem="HdO-Yo-qhv" secondAttribute="bottom" constant="53" id="yxi-hz-4F8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YY1-zo-Olo"/>
                     </view>
                 </viewController>
@@ -99,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="1349.5999999999999" y="528.32512315270935"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="dd0-JJ-Kfu">
             <objects>
-                <viewController id="eaW-3F-9Qx" sceneMemberID="viewController">
+                <viewController id="eaW-3F-9Qx" customClass="RegisterViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pMb-bm-0Eb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +189,9 @@
                                 <rect key="frame" x="159" y="423" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="zsR-rQ-B0z" kind="show" id="I2F-Gd-ZVp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cry-Mj-dHn">
                                 <rect key="frame" x="16" y="289" width="79" height="21"/>
@@ -177,5 +230,139 @@
             </objects>
             <point key="canvasLocation" x="1350" y="-201"/>
         </scene>
+        <!--Topics-->
+        <scene sceneID="YUt-l0-lo0">
+            <objects>
+                <tableViewController id="gJL-KY-hQZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ano-zB-MQx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hde-PI-TRI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hde-PI-TRI" id="Zn4-Xb-M6f">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gJL-KY-hQZ" id="3Ff-Fi-I5R"/>
+                            <outlet property="delegate" destination="gJL-KY-hQZ" id="qnM-gh-7hX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Topics" id="XZe-nj-2XZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="poj-gJ-BzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3462" y="132"/>
+        </scene>
+        <!--Topics View Controller-->
+        <scene sceneID="U2L-fC-ZeZ">
+            <objects>
+                <navigationController id="zsR-rQ-B0z" customClass="TopicsViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bLX-5Q-hQ4">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gJL-KY-hQZ" kind="relationship" relationship="rootViewController" id="zA1-xM-KRx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGU-IN-WHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2689" y="132"/>
+        </scene>
+        <!--Web Content View Controller-->
+        <scene sceneID="49C-LP-vc6">
+            <objects>
+                <viewController id="sk5-Vp-MVi" customClass="WebContentViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vgj-uV-xXr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3J-yU-rWM">
+                                <rect key="frame" x="0.0" y="113" width="375" height="581"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SuE-yr-zKd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bX5-3w-bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6279" y="132"/>
+        </scene>
+        <!--Evaluation View Controller-->
+        <scene sceneID="Npo-dB-G6H">
+            <objects>
+                <viewController id="Hb9-tJ-sOY" customClass="EvaluationViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIa-dG-Rbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sZo-8J-SKz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D88-xM-x3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7127" y="132"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="hbE-Cp-Tce">
+            <objects>
+                <tableViewController id="Xwb-8l-HSM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="onW-qE-fl4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="64p-tm-ND7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="64p-tm-ND7" id="jlV-Yb-dsU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Xwb-8l-HSM" id="lTA-o4-Ow6"/>
+                            <outlet property="delegate" destination="Xwb-8l-HSM" id="AEF-aD-5j3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="OhP-mT-PWn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGN-8e-nGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5268" y="132"/>
+        </scene>
+        <!--Sub Topic View Controller-->
+        <scene sceneID="XbZ-pe-YM3">
+            <objects>
+                <navigationController id="mfR-oy-eeK" customClass="SubTopicViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NLt-pk-6rd">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xwb-8l-HSM" kind="relationship" relationship="rootViewController" id="QyQ-3J-GAG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8n-Zt-4lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4399" y="132"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="I2F-Gd-ZVp"/>
+    </inferredMetricsTieBreakers>
 </document>
