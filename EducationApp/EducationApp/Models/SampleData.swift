@@ -12,8 +12,8 @@ final class SampleData{
     static func generateTopicData() -> [Topic] {
         
         return [
-            Topic(name: "Data Structures", description: "Learn about the basic data structures in Computer Science"),
-            Topic(name: "Statistics", description: "Learn basic statistics concepts important to Data Science")
+            Topic(name: "Data Structures", details: "Learn about the basic data structures in Computer Science"),
+            Topic(name: "Statistics", details: "Learn basic statistics concepts important to Data Science")
         ]
         
     }

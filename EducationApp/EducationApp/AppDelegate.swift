@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: Add Facebook log-in
         // TODO: Add regular sign-in
         // Override point for customization after application launch.
+        
+        let configuration = ParseClientConfiguration {
+            
+            $0.applicationId = "Thomas-Lisankie.EducationApp"
+            $0.server = "http://localhost:1337/parse"
+            
+        }
+        
+        Parse.initialize(with: configuration)
+        
+        
         return true
     }
 

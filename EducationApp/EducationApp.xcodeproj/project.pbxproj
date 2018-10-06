@@ -155,21 +155,13 @@
 		E98D1E6C2158371200FA0E1F /* EducationApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9E4F6B5216947C70038B72E /* View Controllers */,
+				E9E4F6B4216947AF0038B72E /* Models */,
 				E98D1E6D2158371200FA0E1F /* AppDelegate.swift */,
-				E98D1E6F2158371200FA0E1F /* ViewController.swift */,
-				E9FA363F215C5C1700883B53 /* WebContentViewController.swift */,
-				E9FA3637215C565400883B53 /* LaunchViewController.swift */,
-				E9FA3639215C574500883B53 /* RegisterViewController.swift */,
-				E9FA363B215C57AD00883B53 /* LogInViewController.swift */,
 				E98D1E712158371200FA0E1F /* Main.storyboard */,
-				E992C4A8215D3C9900D16287 /* Topic.swift */,
-				E992C4AA215D3D3700D16287 /* SampleData.swift */,
-				E9FA3641215C5DA000883B53 /* SubTopicViewController.swift */,
 				E98D1E742158371300FA0E1F /* Assets.xcassets */,
 				E98D1E762158371300FA0E1F /* LaunchScreen.storyboard */,
 				E98D1E792158371300FA0E1F /* Info.plist */,
-				E9FA3635215C00C400883B53 /* TopicsViewController.swift */,
-				E9FA363D215C5B6D00883B53 /* EvaluationViewController.swift */,
 			);
 			path = EducationApp;
 			sourceTree = "<group>";
@@ -190,6 +182,30 @@
 				E98D1E8F2158371300FA0E1F /* Info.plist */,
 			);
 			path = EducationAppUITests;
+			sourceTree = "<group>";
+		};
+		E9E4F6B4216947AF0038B72E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E992C4A8215D3C9900D16287 /* Topic.swift */,
+				E992C4AA215D3D3700D16287 /* SampleData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9E4F6B5216947C70038B72E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E98D1E6F2158371200FA0E1F /* ViewController.swift */,
+				E9FA363F215C5C1700883B53 /* WebContentViewController.swift */,
+				E9FA3637215C565400883B53 /* LaunchViewController.swift */,
+				E9FA3639215C574500883B53 /* RegisterViewController.swift */,
+				E9FA363B215C57AD00883B53 /* LogInViewController.swift */,
+				E9FA3641215C5DA000883B53 /* SubTopicViewController.swift */,
+				E9FA3635215C00C400883B53 /* TopicsViewController.swift */,
+				E9FA363D215C5B6D00883B53 /* EvaluationViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +425,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -418,6 +435,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
