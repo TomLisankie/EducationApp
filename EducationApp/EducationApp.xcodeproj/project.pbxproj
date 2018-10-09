@@ -19,6 +19,10 @@
 		E98D1E8E2158371300FA0E1F /* EducationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D1E8D2158371300FA0E1F /* EducationAppUITests.swift */; };
 		E992C4A9215D3C9900D16287 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E992C4A8215D3C9900D16287 /* Topic.swift */; };
 		E992C4AB215D3D3700D16287 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E992C4AA215D3D3700D16287 /* SampleData.swift */; };
+		E9A2F610216BBB390059C601 /* SubTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2F60F216BBB390059C601 /* SubTopicTableViewCell.swift */; };
+		E9A2F615216BD9700059C601 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2F614216BD9700059C601 /* UIViewControllerExtension.swift */; };
+		E9E4F6B7216BB0150038B72E /* SubTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4F6B6216BB0150038B72E /* SubTopic.swift */; };
+		E9E4F6BA216BB1CE0038B72E /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4F6B9216BB1CE0038B72E /* TopicTableViewCell.swift */; };
 		E9FA3636215C00C400883B53 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3635215C00C400883B53 /* TopicsViewController.swift */; };
 		E9FA3638215C565400883B53 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3637215C565400883B53 /* LaunchViewController.swift */; };
 		E9FA363A215C574500883B53 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3639215C574500883B53 /* RegisterViewController.swift */; };
@@ -69,6 +73,11 @@
 		E98D1E8F2158371300FA0E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E992C4A8215D3C9900D16287 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		E992C4AA215D3D3700D16287 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		E9A2F60F216BBB390059C601 /* SubTopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTopicTableViewCell.swift; sourceTree = "<group>"; };
+		E9A2F613216BBC6A0059C601 /* EducationApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EducationApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9A2F614216BD9700059C601 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E9E4F6B6216BB0150038B72E /* SubTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTopic.swift; sourceTree = "<group>"; };
+		E9E4F6B9216BB1CE0038B72E /* TopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
 		E9FA3635215C00C400883B53 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		E9FA3637215C565400883B53 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		E9FA3639215C574500883B53 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -155,12 +164,12 @@
 		E98D1E6C2158371200FA0E1F /* EducationApp */ = {
 			isa = PBXGroup;
 			children = (
-				E9E4F6B5216947C70038B72E /* View Controllers */,
-				E9E4F6B4216947AF0038B72E /* Models */,
 				E98D1E6D2158371200FA0E1F /* AppDelegate.swift */,
-				E98D1E712158371200FA0E1F /* Main.storyboard */,
+				E9E4F6B4216947AF0038B72E /* Models */,
+				E9E4F6B8216BB1510038B72E /* Views */,
+				E9E4F6B5216947C70038B72E /* View Controllers */,
+				E9A2F612216BBC380059C601 /* Supporting Files */,
 				E98D1E742158371300FA0E1F /* Assets.xcassets */,
-				E98D1E762158371300FA0E1F /* LaunchScreen.storyboard */,
 				E98D1E792158371300FA0E1F /* Info.plist */,
 			);
 			path = EducationApp;
@@ -184,11 +193,30 @@
 			path = EducationAppUITests;
 			sourceTree = "<group>";
 		};
+		E9A2F611216BBB7A0059C601 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E98D1E712158371200FA0E1F /* Main.storyboard */,
+				E98D1E762158371300FA0E1F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E9A2F612216BBC380059C601 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9A2F611216BBB7A0059C601 /* Storyboards */,
+				E9A2F613216BBC6A0059C601 /* EducationApp-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E9E4F6B4216947AF0038B72E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E992C4A8215D3C9900D16287 /* Topic.swift */,
 				E992C4AA215D3D3700D16287 /* SampleData.swift */,
+				E9E4F6B6216BB0150038B72E /* SubTopic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,8 +232,18 @@
 				E9FA3641215C5DA000883B53 /* SubTopicViewController.swift */,
 				E9FA3635215C00C400883B53 /* TopicsViewController.swift */,
 				E9FA363D215C5B6D00883B53 /* EvaluationViewController.swift */,
+				E9A2F614216BD9700059C601 /* UIViewControllerExtension.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E9E4F6B8216BB1510038B72E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9E4F6B9216BB1CE0038B72E /* TopicTableViewCell.swift */,
+				E9A2F60F216BBB390059C601 /* SubTopicTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +464,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseUI/ParseUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -436,6 +475,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -451,6 +491,10 @@
 			files = (
 				E9FA363E215C5B6D00883B53 /* EvaluationViewController.swift in Sources */,
 				E992C4A9215D3C9900D16287 /* Topic.swift in Sources */,
+				E9A2F615216BD9700059C601 /* UIViewControllerExtension.swift in Sources */,
+				E9A2F610216BBB390059C601 /* SubTopicTableViewCell.swift in Sources */,
+				E9E4F6BA216BB1CE0038B72E /* TopicTableViewCell.swift in Sources */,
+				E9E4F6B7216BB0150038B72E /* SubTopic.swift in Sources */,
 				E9FA3642215C5DA000883B53 /* SubTopicViewController.swift in Sources */,
 				E9FA3640215C5C1700883B53 /* WebContentViewController.swift in Sources */,
 				E98D1E702158371200FA0E1F /* ViewController.swift in Sources */,
@@ -643,6 +687,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Thomas-Lisankie.EducationApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EducationApp/Supporting Files/EducationApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -661,6 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Thomas-Lisankie.EducationApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EducationApp/Supporting Files/EducationApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

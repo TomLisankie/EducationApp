@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = ParseClientConfiguration {
             
             $0.applicationId = "Thomas-Lisankie.EducationApp"
-            $0.server = "http://localhost:1337/parse"
+            $0.server = "https://localhost:1337/parse"
             
         }
         

@@ -33,11 +33,15 @@ PODS:
     - Parse/Core (= 1.17.1)
   - Parse/Core (1.17.1):
     - Bolts/Tasks (~> 1.9)
+  - ParseUI (1.2.0):
+    - Bolts/Tasks (~> 1.3)
+    - Parse (~> 1.9)
 
 DEPENDENCIES:
   - FBSDKLoginKit
   - GoogleSignIn
   - Parse
+  - ParseUI
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,6 +53,7 @@ SPEC REPOS:
     - GTMOAuth2
     - GTMSessionFetcher
     - Parse
+    - ParseUI
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -59,7 +64,8 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
+  ParseUI: 2b37a0bc692a3e7666cf0c37b5521dfddd74a1af
 
-PODFILE CHECKSUM: 2c0e75015e478b90e6a898c693655e730fd4219f
+PODFILE CHECKSUM: 6cc1ff797d2e273050da0e03bde370015e686d05
 
 COCOAPODS: 1.5.3
