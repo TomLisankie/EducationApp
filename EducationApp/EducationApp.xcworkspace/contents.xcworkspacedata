@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/thomas/Desktop/Dev/EducationApp/EducationApp/EducationApp/View Controllers/TopicsViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:EducationApp.xcodeproj">
    </FileRef>
    <FileRef

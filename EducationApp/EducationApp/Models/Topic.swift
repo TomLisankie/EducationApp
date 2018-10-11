@@ -13,7 +13,7 @@ class Topic : PFObject {
     //MARK: Properties
     @NSManaged var name: String?
     @NSManaged var details: String?
-    @NSManaged var subTopics: [SubTopic]?
+    @NSManaged var subTopics: [SubTopic]? //Need to change this to match with db structure
     
     //MARK: Initializers
     init(name: String, details: String) {
@@ -22,6 +22,11 @@ class Topic : PFObject {
         self.name = name
         self.details = details
         
+    }
+    
+    // Required otherwise the application crashes
+    override init() {
+        super.init()
     }
     
     //MARK: Overridden
