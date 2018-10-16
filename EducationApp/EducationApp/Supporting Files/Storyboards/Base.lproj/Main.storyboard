@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.26600985221674"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="Edf-PW-StX">
             <objects>
-                <viewController id="4Qb-BF-JPd" sceneMemberID="viewController">
+                <viewController id="4Qb-BF-JPd" customClass="LogInViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Whf-fF-eck">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,8 +114,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Yo-qhv">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Yo-qhv">
                                 <rect key="frame" x="103" y="308" width="222" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -124,7 +125,8 @@
                                 <rect key="frame" x="166" y="391" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="9Vo-Ks-8zA" kind="show" id="Nwc-Aw-cdL"/>
+                                    <action selector="logInPressed" destination="4Qb-BF-JPd" eventType="touchDown" id="72e-xD-VDi"/>
+                                    <segue destination="9Vo-Ks-8zA" kind="show" identifier="toTopicsFromLogIn" id="R5M-gG-pfE"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPz-fP-Yxd">
@@ -134,16 +136,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make sure your emails and password are correct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAC-sQ-2Uf">
+                                <rect key="frame" x="5" y="118" width="370" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="S4b-B4-HmY" firstAttribute="centerX" secondItem="Whf-fF-eck" secondAttribute="centerX" id="Dy2-om-lov"/>
                             <constraint firstItem="S4b-B4-HmY" firstAttribute="leading" secondItem="YY1-zo-Olo" secondAttribute="leading" constant="166" id="aa2-ja-ORG"/>
                             <constraint firstItem="S4b-B4-HmY" firstAttribute="centerY" secondItem="Whf-fF-eck" secondAttribute="centerY" id="fX0-vt-PyE"/>
-                            <constraint firstItem="S4b-B4-HmY" firstAttribute="top" secondItem="HdO-Yo-qhv" secondAttribute="bottom" constant="53" id="yxi-hz-4F8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YY1-zo-Olo"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="ZPz-fP-Yxd" id="Utv-i6-D9c"/>
+                        <outlet property="logInError" destination="QAC-sQ-2Uf" id="9yI-d0-rmg"/>
+                        <outlet property="password" destination="HdO-Yo-qhv" id="c46-02-RLD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwz-6p-ASU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,7 +203,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="9Vo-Ks-8zA" kind="show" id="x6B-6D-jtz"/>
+                                    <action selector="signupPressed" destination="eaW-3F-9Qx" eventType="touchDown" id="MDI-94-xg4"/>
+                                    <segue destination="9Vo-Ks-8zA" kind="showDetail" identifier="toTopicsFromRegistration" id="ZCG-GC-a3a"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cry-Mj-dHn">
@@ -205,7 +219,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmQ-ZK-tVd">
                                 <rect key="frame" x="16" y="356" width="144" height="21"/>
@@ -219,16 +233,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make sure your emails and passwords match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-9H-a2x">
+                                <rect key="frame" x="16" y="102" width="343" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mXX-0U-xMn"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="HMz-B7-cV0" id="Oeb-E9-YVV"/>
+                        <outlet property="emailConfirm" destination="QxP-8V-mL1" id="M65-Bu-ORz"/>
+                        <outlet property="password" destination="b5W-5L-B7A" id="sGB-Sc-UEg"/>
+                        <outlet property="passwordConfirm" destination="bRw-cs-1hi" id="Mx4-aK-VBk"/>
+                        <outlet property="signupError" destination="F8C-9H-a2x" id="9kH-yx-AhW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S79-JR-FDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="-201"/>
+            <point key="canvasLocation" x="1349.5999999999999" y="-201.72413793103451"/>
         </scene>
         <!--Topics View Controller-->
         <scene sceneID="Ez2-he-5iY">
@@ -247,7 +275,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="t0f-av-kTu" kind="show" identifier="toSubTopics" id="5U7-gw-FZu"/>
+                                    <segue destination="t0f-av-kTu" kind="showDetail" identifier="toSubTopics" id="CbQ-fr-Gf4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -261,22 +289,25 @@
             </objects>
             <point key="canvasLocation" x="2655" y="132"/>
         </scene>
-        <!--Sub Topic View Controller-->
+        <!--Sub Topics View Controller-->
         <scene sceneID="QUZ-tm-uKH">
             <objects>
-                <tableViewController id="t0f-av-kTu" customClass="SubTopicViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="t0f-av-kTu" customClass="SubTopicsViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bld-au-hOk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="u40-1j-lM0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="u40-1j-lM0">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u40-1j-lM0" id="VRl-Kh-KJH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ppl-Fu-BN0" kind="show" identifier="toContentView" id="D55-5Y-KrI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -290,30 +321,25 @@
             <point key="canvasLocation" x="3452" y="100"/>
         </scene>
         <!--Web Content View Controller-->
-        <scene sceneID="49C-LP-vc6">
+        <scene sceneID="rqg-UH-PGK">
             <objects>
-                <viewController id="sk5-Vp-MVi" customClass="WebContentViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vgj-uV-xXr">
+                <viewController id="Ppl-Fu-BN0" customClass="WebContentViewController" customModule="EducationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <wkWebView key="view" contentMode="scaleToFill" id="qtn-ge-OEP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3J-yU-rWM">
-                                <rect key="frame" x="0.0" y="113" width="375" height="581"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="SuE-yr-zKd"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
+                    </wkWebView>
+                    <connections>
+                        <outlet property="webView" destination="qtn-ge-OEP" id="6Yt-RR-LkK"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bX5-3w-bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WD-Va-vV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6279" y="132"/>
+            <point key="canvasLocation" x="4327" y="100"/>
         </scene>
         <!--Evaluation View Controller-->
         <scene sceneID="Npo-dB-G6H">
@@ -357,10 +383,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGN-8e-nGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5268" y="132"/>
+            <point key="canvasLocation" x="6263" y="160"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nwc-Aw-cdL"/>
+        <segue reference="R5M-gG-pfE"/>
     </inferredMetricsTieBreakers>
 </document>

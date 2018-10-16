@@ -12,17 +12,14 @@ class SubTopic : PFObject {
     
     //MARK: Properties
     @NSManaged var name: String?
-    @NSManaged var details: String?
-    @NSManaged var url: URL?
+    @NSManaged var links: [String: String]?
     
     //MARK: Initializers
-    init(name: String, details: String, url: URL) {
+    init(name: String, links: [String: String]) {
         
         super.init()
         self.name = name
-        self.details = details
-        self.url = url
-        
+        self.links = links
     }
     
     //MARK: Overridden

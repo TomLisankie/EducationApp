@@ -21,6 +21,7 @@ class Topic : PFObject {
         super.init()
         self.name = name
         self.details = details
+        //self.subTopics = [SubTopic]
         
     }
     

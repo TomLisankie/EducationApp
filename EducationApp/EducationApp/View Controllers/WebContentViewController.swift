@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import WebKit
 
-class WebContentViewController: UIViewController {
+class WebContentViewController: UIViewController, WKUIDelegate {
+    
+    @IBOutlet weak var webView : WKWebView!
+    
+    var links : [String : String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Load a link
+        let linkTitles = links?.keys
+        let contentURL = URL(string: links?[(linkTitles?.randomElement())!] ?? "title1")
+        let urlRequest = URLRequest(url: contentURL!)
+        webView.load(urlRequest)
+        
     }
     
 }

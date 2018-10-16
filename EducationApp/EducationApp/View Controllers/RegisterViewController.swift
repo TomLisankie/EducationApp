@@ -10,9 +10,39 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet weak var email : UITextField!
+    @IBOutlet weak var emailConfirm : UITextField!
+    @IBOutlet weak var password : UITextField!
+    @IBOutlet weak var passwordConfirm : UITextField!
+    
+    @IBOutlet weak var signupError : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func signupPressed() {
+        
+        // Check that emails and passwords match before proceeding to sign-up
+        // TODO: Add rules to make sure input is valid.
+        if (email.text != emailConfirm.text) || (password.text != passwordConfirm.text) {
+            
+            signupError.isHidden = false
+            return
+            
+        }
+        
+        let newUser = PFUser()
+        newUser.username = email.text
+        newUser.password = password.text
+        newUser.email = email.text
+        
+        newUser.signUpInBackground()
+        
+        self.performSegue(withIdentifier: "toTopicsFromRegistration", sender: self)
+        
+    }
+    
 }
+

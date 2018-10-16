@@ -17,14 +17,12 @@
 		E98D1E832158371300FA0E1F /* EducationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D1E822158371300FA0E1F /* EducationAppTests.swift */; };
 		E98D1E8E2158371300FA0E1F /* EducationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D1E8D2158371300FA0E1F /* EducationAppUITests.swift */; };
 		E992C4A9215D3C9900D16287 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E992C4A8215D3C9900D16287 /* Topic.swift */; };
-		E992C4AB215D3D3700D16287 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E992C4AA215D3D3700D16287 /* SampleData.swift */; };
 		E99F978D216E78470007824B /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F978C216E78470007824B /* TopicsViewController.swift */; };
-		E99F978F216E86900007824B /* SubTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F978E216E86900007824B /* SubTopicViewController.swift */; };
+		E99F978F216E86900007824B /* SubTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F978E216E86900007824B /* SubTopicsViewController.swift */; };
 		E9A2F610216BBB390059C601 /* SubTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2F60F216BBB390059C601 /* SubTopicTableViewCell.swift */; };
 		E9A2F615216BD9700059C601 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2F614216BD9700059C601 /* UIViewControllerExtension.swift */; };
 		E9E4F6B7216BB0150038B72E /* SubTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4F6B6216BB0150038B72E /* SubTopic.swift */; };
 		E9E4F6BA216BB1CE0038B72E /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4F6B9216BB1CE0038B72E /* TopicTableViewCell.swift */; };
-		E9FA3636215C00C400883B53 /* OldTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3635215C00C400883B53 /* OldTopicsViewController.swift */; };
 		E9FA3638215C565400883B53 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3637215C565400883B53 /* LaunchViewController.swift */; };
 		E9FA363A215C574500883B53 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA3639215C574500883B53 /* RegisterViewController.swift */; };
 		E9FA363C215C57AD00883B53 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA363B215C57AD00883B53 /* LogInViewController.swift */; };
@@ -71,15 +69,13 @@
 		E98D1E8D2158371300FA0E1F /* EducationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationAppUITests.swift; sourceTree = "<group>"; };
 		E98D1E8F2158371300FA0E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E992C4A8215D3C9900D16287 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
-		E992C4AA215D3D3700D16287 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		E99F978C216E78470007824B /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopicsViewController.swift; path = "/Users/thomas/Desktop/Dev/EducationApp/EducationApp/EducationApp/View Controllers/TopicsViewController.swift"; sourceTree = "<absolute>"; };
-		E99F978E216E86900007824B /* SubTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTopicViewController.swift; sourceTree = "<group>"; };
+		E99F978E216E86900007824B /* SubTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTopicsViewController.swift; sourceTree = "<group>"; };
 		E9A2F60F216BBB390059C601 /* SubTopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTopicTableViewCell.swift; sourceTree = "<group>"; };
 		E9A2F613216BBC6A0059C601 /* EducationApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EducationApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		E9A2F614216BD9700059C601 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E9E4F6B6216BB0150038B72E /* SubTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTopic.swift; sourceTree = "<group>"; };
 		E9E4F6B9216BB1CE0038B72E /* TopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
-		E9FA3635215C00C400883B53 /* OldTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldTopicsViewController.swift; sourceTree = "<group>"; };
 		E9FA3637215C565400883B53 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		E9FA3639215C574500883B53 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E9FA363B215C57AD00883B53 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -215,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				E992C4A8215D3C9900D16287 /* Topic.swift */,
-				E992C4AA215D3D3700D16287 /* SampleData.swift */,
 				E9E4F6B6216BB0150038B72E /* SubTopic.swift */,
 			);
 			path = Models;
@@ -224,13 +219,12 @@
 		E9E4F6B5216947C70038B72E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E9FA363F215C5C1700883B53 /* WebContentViewController.swift */,
 				E9FA3637215C565400883B53 /* LaunchViewController.swift */,
 				E9FA3639215C574500883B53 /* RegisterViewController.swift */,
 				E9FA363B215C57AD00883B53 /* LogInViewController.swift */,
 				E99F978C216E78470007824B /* TopicsViewController.swift */,
-				E9FA3635215C00C400883B53 /* OldTopicsViewController.swift */,
-				E99F978E216E86900007824B /* SubTopicViewController.swift */,
+				E99F978E216E86900007824B /* SubTopicsViewController.swift */,
+				E9FA363F215C5C1700883B53 /* WebContentViewController.swift */,
 				E9FA363D215C5B6D00883B53 /* EvaluationViewController.swift */,
 				E9A2F614216BD9700059C601 /* UIViewControllerExtension.swift */,
 			);
@@ -493,16 +487,14 @@
 				E992C4A9215D3C9900D16287 /* Topic.swift in Sources */,
 				E9A2F615216BD9700059C601 /* UIViewControllerExtension.swift in Sources */,
 				E9A2F610216BBB390059C601 /* SubTopicTableViewCell.swift in Sources */,
-				E99F978F216E86900007824B /* SubTopicViewController.swift in Sources */,
+				E99F978F216E86900007824B /* SubTopicsViewController.swift in Sources */,
 				E9E4F6BA216BB1CE0038B72E /* TopicTableViewCell.swift in Sources */,
 				E9E4F6B7216BB0150038B72E /* SubTopic.swift in Sources */,
 				E9FA3640215C5C1700883B53 /* WebContentViewController.swift in Sources */,
 				E99F978D216E78470007824B /* TopicsViewController.swift in Sources */,
 				E9FA363A215C574500883B53 /* RegisterViewController.swift in Sources */,
 				E9FA363C215C57AD00883B53 /* LogInViewController.swift in Sources */,
-				E992C4AB215D3D3700D16287 /* SampleData.swift in Sources */,
 				E98D1E6E2158371200FA0E1F /* AppDelegate.swift in Sources */,
-				E9FA3636215C00C400883B53 /* OldTopicsViewController.swift in Sources */,
 				E9FA3638215C565400883B53 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GT5Y93T4P4;
 				INFOPLIST_FILE = EducationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GT5Y93T4P4;
 				INFOPLIST_FILE = EducationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

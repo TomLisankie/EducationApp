@@ -9,12 +9,16 @@ import UIKit
 
 class TopicsViewController: PFQueryTableViewController {
     
+    var subTopicsDict = [String : [[String : Any]]]()
+    var topics = [PFObject]()
+    
     override init(style: UITableView.Style, className: String?) {
         super.init(style: style, className: className)
         parseClassName = "Topic"
         pullToRefreshEnabled = false
         paginationEnabled = false
         objectsPerPage = 50
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +32,7 @@ class TopicsViewController: PFQueryTableViewController {
     override func queryForTable() -> PFQuery<PFObject> {
         let query = PFQuery(className: self.parseClassName!)
         
-        if self.objects!.count == 0{
+        if self.objects!.count == 0 {
             
             query.cachePolicy = .cacheThenNetwork
             
@@ -53,7 +57,10 @@ class TopicsViewController: PFQueryTableViewController {
         if let object = object {
             cell!.textLabel?.text = object["name"] as? String
             cell!.detailTextLabel?.text = object["details"] as? String
-            
+            let topic_name = object["name"] as? String
+            let subtopics = object["subtopics"] as? [[String : Any]]
+            self.subTopicsDict[topic_name!] = subtopics
+            topics.append(object)
         }
         
         return cell!
@@ -71,7 +78,15 @@ class TopicsViewController: PFQueryTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        print("Hello from the Segue")
+        
+        let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
+        
+        let selected_topic = self.topics[indexPath.row]
+        
+        let destinationVC = segue.destination as? SubTopicsViewController
+        
+        destinationVC?.parentTopicObject = selected_topic
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
