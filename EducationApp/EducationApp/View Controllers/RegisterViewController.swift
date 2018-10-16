@@ -31,16 +31,21 @@ class RegisterViewController: UIViewController {
             signupError.isHidden = false
             return
             
+        } else {
+            
+            var newUser = PFUser()
+            newUser.username = email.text
+            newUser.password = password.text
+            newUser.email = email.text
+            newUser["content_ratings"] = [String : String]()
+            var contentRatings = newUser["content_ratings"] as! [String : String]
+            contentRatings["example link"] = "example score"
+            
+            newUser.signUpInBackground()
+            
+            self.performSegue(withIdentifier: "toTopicsFromRegistration", sender: self)
+            
         }
-        
-        let newUser = PFUser()
-        newUser.username = email.text
-        newUser.password = password.text
-        newUser.email = email.text
-        
-        newUser.signUpInBackground()
-        
-        self.performSegue(withIdentifier: "toTopicsFromRegistration", sender: self)
         
     }
     

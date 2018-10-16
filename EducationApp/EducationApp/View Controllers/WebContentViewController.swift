@@ -26,4 +26,44 @@ class WebContentViewController: UIViewController, WKUIDelegate {
         
     }
     
+    @IBAction func yesButtonTapped(){
+        
+        let currentUser = PFUser.current()
+        if currentUser != nil {
+            var contentRatings = currentUser!["content_ratings"] as! [String : String]
+            var formattedURL = webView.url?.absoluteString as! String
+            contentRatings[formattedURL.replacingOccurrences(of: ".", with: "~dot~") ] = "Y"
+            currentUser!["content_ratings"] = contentRatings
+            print(currentUser!["content_ratings"])
+            currentUser?.saveInBackground()
+            
+            print("User found article helpful")
+        } else {
+            
+            print("No current user")
+            
+        }
+        
+    }
+    
+    @IBAction func noButtonTapped(){
+        
+        let currentUser = PFUser.current()
+        if currentUser != nil {
+            var contentRatings = currentUser!["content_ratings"] as! [String : String]
+            var formattedURL = webView.url?.absoluteString as! String
+            contentRatings[formattedURL.replacingOccurrences(of: ".", with: "~dot~") ] = "N"
+            currentUser!["content_ratings"] = contentRatings
+            print(currentUser!["content_ratings"])
+            currentUser?.saveInBackground()
+            
+            print("User did not find article helpful")
+        } else {
+            
+            print("No current user")
+            
+        }
+        
+    }
+    
 }
